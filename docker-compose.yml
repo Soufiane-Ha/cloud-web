@@ -1,14 +1,12 @@
-version: '3.8'
-
 services:
-  web:
-    build: ./app
-    container_name: php_app
-    ports:
-      - "80:80"
+  db:
+    image: postgres:13
+    container_name: pg_container
     environment:
-      DB_HOST: dpg-d0cfcj6uk2gs738mamd0-a
-      DB_PORT: 5432
-      DB_NAME: database_3qhp
-      DB_USER: database_3qhp_user
-      DB_PASSWORD: XDlQhcomymh3Ppq0Mpmx0ShfG1rVg9CF
+      POSTGRES_USER: database_3qhp_user
+      POSTGRES_PASSWORD: XDlQhcomymh3Ppq0Mpmx0ShfG1rVg9CF
+      POSTGRES_DB: database_3qhp
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
