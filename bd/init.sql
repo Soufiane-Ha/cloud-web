@@ -37,7 +37,7 @@ CREATE TABLE `admins` (
 -- Déchargement des données de la table `admins`
 --
 
-INSERT INTO admins (`id`, `name`, `password`) VALUES
+INSERT INTO `admins` (`id`, `name`, `password`) VALUES
 (1, 'admin', '6216f8a75fd5bb3d5f22b6f9958cdede3fc086c2');
 
 -- --------------------------------------------------------
@@ -46,7 +46,7 @@ INSERT INTO admins (`id`, `name`, `password`) VALUES
 -- Structure de la table `cart`
 --
 
-CREATE TABLE cart (
+CREATE TABLE `cart` (
   `id` int(100) NOT NULL,
   `user_id` int(100) NOT NULL,
   `pid` int(100) NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE cart (
 -- Déchargement des données de la table `cart`
 --
 
-INSERT INTO cart (`id`, `user_id`, `pid`, `name`, `price`, `quantity`, `image`) VALUES
+INSERT INTO `cart` (`id`, `user_id`, `pid`, `name`, `price`, `quantity`, `image`) VALUES
 (3, 1, 6, 'mouse', 5600, 1, 'images (2).jpg'),
 (4, 1, 3, 'camera', 3420, 1, 'camera1.webp');
 
@@ -185,13 +185,13 @@ CREATE TABLE `wishlist` (
 --
 -- Index pour la table `admins`
 --
-ALTER TABLE admins
+ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `cart`
 --
-ALTER TABLE cart
+ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -215,13 +215,13 @@ ALTER TABLE `products`
 --
 -- Index pour la table `users`
 --
-ALTER TABLE users
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `wishlist`
 --
-ALTER TABLE wishlist
+ALTER TABLE `wishlist`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -231,25 +231,25 @@ ALTER TABLE wishlist
 --
 -- AUTO_INCREMENT pour la table `admins`
 --
-ALTER TABLE admins
+ALTER TABLE `admins`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `cart`
 --
-ALTER TABLE cart
+ALTER TABLE `cart`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `messages`
 --
-ALTER TABLE messages
+ALTER TABLE `messages`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `orders`
 --
-ALTER TABLE orders
+ALTER TABLE `orders`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
