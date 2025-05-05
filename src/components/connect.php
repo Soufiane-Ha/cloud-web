@@ -1,8 +1,8 @@
 <?php
- $host = 'dpg-d0cfcj6uk2gs738mamd0-a';          
-$db   = 'database_3qhp';      
-$user = 'database_3qhp_user';      
-$pass = 'XDlQhcomymh3Ppq0Mpmx0ShfG1rVg9CF';      
+$host = getenv('DB_HOST') ?: 'db';
+$db   = getenv('DB_NAME') ?: 'shop_db';
+$user = getenv('DB_USER') ?: 'myuser';
+$pass = getenv('DB_PASS') ?: 'mypass';
 $charset = 'utf8mb4';
 
 $dsn = "pgsql:host=$host;port=5432;dbname=$db";
