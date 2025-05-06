@@ -1,4 +1,4 @@
--- إنشاء جدول المستخدمين
+
 CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100),
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- إنشاء جدول المنتجات
+
 CREATE TABLE IF NOT EXISTS products (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100),
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS products (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- إنشاء جدول السلة
+
 CREATE TABLE IF NOT EXISTS cart (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS cart (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- إنشاء جدول الطلبات
+
 CREATE TABLE IF NOT EXISTS orders (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id),
