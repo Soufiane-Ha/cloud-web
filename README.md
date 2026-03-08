@@ -28,3 +28,27 @@ VMs        : هو تمثيل إفتراضي أو إن صحة التعبير مح
 | **DOCKER COMPOSE** | أداة لتشغيل تطبيقات متعددة الحاويات باستخدام YAML |
 | **DOCKER DESKTOP** | تطبيق سطح المكتب لإدارة الحاويات بسهولة |
 | **WEB** | الملف الذي تريد عرضه ب docker |
+
+
+## INSTRUCTIONS
+
+
+| التعليمات | الوصف |
+|------|------|
+| **docker ps** | الحاويات الشغالة |
+| **docker-compose up -d** | رفع الملفات |
+| **docker-compose up --build -d** | إعادة تشغيل الحاوية |
+| **docker-compose up** | رفع و تهيئة الملفات |
+| **docker-compose down** | إيقاف الحاوية و حذفها و حذف الشبكة الخاصة بالمشروع |
+
+# EXSEMPLER
+
+docker ps
+
+~~~~
+C:\Users\User\test_docker>docker ps
+CONTAINER ID   IMAGE           COMMAND                  STATUS          PORTS                  NAMES
+a1b2c3d4e5f6   php:8.2-apache  "docker-php-entrypoi…"   Up 2 minutes    0.0.0.0:8080->80/tcp   my_web
+~~~~
+
+
